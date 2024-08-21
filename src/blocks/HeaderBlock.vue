@@ -44,7 +44,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 .main_header {
     align-items: center;
     font-size: 16px;
-    justify-content: center;
+    justify-content: space-around;
     height: 100px;
     border-bottom: 1px solid rgba(202, 194, 178, 0.85);
     position: sticky;
@@ -88,5 +88,9 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 .main_header__navigation,
 .main_header__buttons button {
     cursor: pointer;
+}
+
+.main_header__buttons {
+    gap: 15px;
 }
 </style>

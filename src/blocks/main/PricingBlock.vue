@@ -132,6 +132,6 @@ const priceDescription = computed(() => {
     border-bottom: 2px solid rgb(154, 68, 151);
     transform: rotate(-45deg);
     left: -17px;
-    top: 5px;
+    top: 3px;
 }
 </style>

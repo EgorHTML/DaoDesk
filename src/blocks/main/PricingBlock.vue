@@ -39,3 +39,27 @@ import SwitchInput from '../../components/inputs/SwitchInput.vue';
         </div>
     </div>
 </template>
+
+<style>
+.pricing_platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing_platform__description li {
+    position: relative;
+}
+
+.pricing_platform__description li::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 5px;
+    border-left: 2px solid rgb(154, 68, 151);
+    border-bottom: 2px solid rgb(154, 68, 151);
+    transform: rotate(-45deg);
+    left: -17px;
+    top: 5px;
+}
+</style>

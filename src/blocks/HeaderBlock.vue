@@ -42,16 +42,23 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 }
 
 .main_header {
+    width: 100%;
     align-items: center;
-    font-size: 16px;
+    font-size: 20px;
     justify-content: space-around;
-    height: 100px;
+    height: 80px;
     border-bottom: 1px solid rgba(202, 194, 178, 0.85);
-    position: sticky;
+    position: fixed;
+    background: rgb(254, 250, 242);
+    z-index: 1000;
 }
 
 .main_header nav {
     height: 100%;
+}
+
+.main_header nav ul {
+    gap: 100px;
 }
 
 .main_header__navigation {

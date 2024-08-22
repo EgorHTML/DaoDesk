@@ -4,24 +4,26 @@ import TrialImageHero from './TrialImageHero.vue';
 </script>
 
 <template>
-    <div class="main_container">
-        <div class="trial">
-            <div class="description">
-                <h2>
-                    AI-first service. Catered to humans.
-                </h2>
+    <div style="background: rgb(254, 250, 242);">
+        <div class="main_container" style="height: 100vh; display: flex; align-items: center;">
+            <div class="trial">
+                <div class="description">
+                    <h2>
+                        AI-first service. Catered to humans.
+                    </h2>
 
-                <p>Customers and employees are more than interactions, they're human. Give them faster, more
-                    personalized
-                    experiences using AI trained in the art of customer service.</p>
+                    <p>Customers and employees are more than interactions, they're human. Give them faster, more
+                        personalized
+                        experiences using AI trained in the art of customer service.</p>
 
-                <div class="trial__buttons">
-                    <PrimaryButton text="Start your free trial" />
-                    <PrimaryButton text="View demo" />
+                    <div class="trial__buttons">
+                        <PrimaryButton text="Start your free trial" />
+                        <PrimaryButton text="View demo" />
+                    </div>
                 </div>
-            </div>
-            <div class="description_img">
-                <TrialImageHero />
+                <div class="description_img">
+                    <TrialImageHero />
+                </div>
             </div>
         </div>
     </div>
@@ -30,10 +32,11 @@ import TrialImageHero from './TrialImageHero.vue';
 <style scoped>
 .trial {
     display: flex;
+    align-items: center;
 }
 
 .description {
-    width: 50%;
+    width: 60%;
 }
 
 .trial__buttons {
@@ -42,7 +45,7 @@ import TrialImageHero from './TrialImageHero.vue';
 }
 
 .description_img img {
-    width: 800px;
+    width: 600px;
 }
 
 h2 {
@@ -61,7 +64,7 @@ p {
     margin: 0px 0px 12px;
     font-family: "ABC Social", Arial, sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: calc(1em + 8px);
     letter-spacing: 0px;
 }

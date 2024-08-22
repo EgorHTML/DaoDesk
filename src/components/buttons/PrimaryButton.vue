@@ -64,6 +64,6 @@ defineProps({
 }
 
 .primary_button:hover span {
-    animation: ButtonTextSwitch ease 0.6s forwards;
+    animation: ButtonTextSwitch ease 0.4s forwards;
 }
 </style>

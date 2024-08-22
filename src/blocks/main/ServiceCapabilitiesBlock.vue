@@ -27,6 +27,7 @@ import photo from '../../assets/images/features-desktop.avif'
 }
 
 .description_service__title {
+    margin-bottom: 20px;
     font-size: 60px;
     width: 100%;
 }

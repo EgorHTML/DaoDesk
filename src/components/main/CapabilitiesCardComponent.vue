@@ -1,15 +1,28 @@
 <script setup>
-defineProps({
+import { onMounted, ref, shallowRef } from 'vue';
+const props = defineProps({
     title: String,
     description: String,
-    icon: Object
+    icon: String
 })
+
+const svg = shallowRef()
+
+const getSvgIcon = async (name) => {
+    const module = await import(`../icons/${name}.vue`)
+    return module.default
+}
+
+onMounted(async () => {
+    svg.value = await getSvgIcon(props.icon)
+})
+
 </script>
 
 <template>
     <div class="service_card">
         <div class="icon">
-            <icon width="25" height="25" />
+            <component :is="svg" width="30" height="30"></component>
         </div>
         <div class="card_body">
             <h2>{{ title }}</h2>
@@ -28,7 +41,8 @@ defineProps({
     gap: 10px;
     padding: 15px;
     transition: background 0.1s ease;
-    width: 48%;
+    margin-bottom: 20px;
+    max-height: 80px;
 }
 
 .service_card:hover {

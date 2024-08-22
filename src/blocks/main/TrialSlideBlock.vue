@@ -18,7 +18,8 @@ import TrialImageHero from './TrialImageHero.vue';
 
                     <div class="trial__buttons">
                         <PrimaryButton text="Start your free trial" />
-                        <PrimaryButton text="View demo" />
+                        <PrimaryButton text="View demo" fromBorderColor="#000" fromBgColor="#fff"
+                            fromFontColor="#000" />
                     </div>
                 </div>
                 <div class="description_img">

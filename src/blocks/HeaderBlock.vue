@@ -27,7 +27,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
                     <PrimaryButton text="free trial" />
                 </li>
                 <li>
-                    <PrimaryButton text="Buy now" />
+                    <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff" fromFontColor="#000" />
                 </li>
             </ul>
         </div>
@@ -99,5 +99,6 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 
 .main_header__buttons {
     gap: 15px;
+
 }
 </style>

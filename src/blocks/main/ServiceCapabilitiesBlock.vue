@@ -23,7 +23,7 @@ import photo from '../../assets/images/features-desktop.avif'
 <style>
 .service_features {
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .description_service__title {

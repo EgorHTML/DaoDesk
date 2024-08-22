@@ -1,23 +1,39 @@
 <script setup>
+import { computed, ref } from 'vue';
 import PrimaryButton from '../../components/buttons/PrimaryButton.vue'
 import SwitchInput from '../../components/inputs/SwitchInput.vue';
+
+const stateSwitch = ref(false)
+
+function switchPrice(value) {
+    stateSwitch.value = value
+}
+
+const priceDescription = computed(() => {
+    if (stateSwitch.value)
+        return { price: 25, text: 'billed monthly' }
+    return { price: 20, text: 'billed annually' }
+})
 </script>
 
 <template>
     <div class="pricing_platform">
-        <h2>Cost of the platform</h2>
-        <p>We believe that quality products should be available to every business</p>
+        <div class="pricing_platform__title">
+            <h2>Cost of the platform</h2>
+            <p>We believe that quality products should be available to every business</p>
+        </div>
         <div class="card_price">
             <h2>Online version</h2>
-            <SwitchInput from="Annual fee" to="Monthly fee" />
+            <SwitchInput class="swtch_button" from="Annual fee" to="Monthly fee" :state="stateSwitch"
+                @switch="switchPrice" />
             <div class="price_selection">
-                <span class="card_cost"> €20 </span>
+                <span class="card_cost"> €{{ priceDescription.price }} </span>
                 <div class="cost_description">
                     <p>Per agent per month</p>
-                    <p>(billed annually)</p>
+                    <p>({{ priceDescription.text }})</p>
                 </div>
             </div>
-            <PrimaryButton text="Free trial" />
+            <PrimaryButton style="align-self: center; font-size: 18px; padding: 10px;" text="Free trial" />
             <div class="pricing_platform__description">
                 <ul>
                     <li>Connecting email and telephony</li>
@@ -41,14 +57,70 @@ import SwitchInput from '../../components/inputs/SwitchInput.vue';
 </template>
 
 <style>
+.cost_description p {
+    margin-bottom: 5px;
+}
+
+.card_cost {
+    font-size: 60px;
+    font-family: GothamProBold;
+    line-height: 60px;
+    float: right;
+    text-align: right;
+}
+
+.swtch_button {
+    font-weight: 700;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.price_selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_price {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_price h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 .pricing_platform {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.pricing_platform__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.pricing_platform__title h2 {
+    font-size: 40px;
+}
+
+.pricing_platform__title p {
+    font-size: 20px;
+}
+
+.pricing_platform__description {
+    margin-top: 30px;
+}
+
 .pricing_platform__description li {
     position: relative;
+    margin-bottom: 15px;
 }
 
 .pricing_platform__description li::before {

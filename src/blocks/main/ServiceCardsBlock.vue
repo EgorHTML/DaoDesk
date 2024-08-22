@@ -95,7 +95,6 @@ const rightCards = [
 
 <style>
 .service_cards {
-    height: 560px;
     display: flex;
 }
 

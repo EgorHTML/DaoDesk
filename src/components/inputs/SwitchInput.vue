@@ -1,18 +1,30 @@
 <script setup>
 import { ref } from 'vue';
 
-defineProps({
+const props = defineProps({
     from: String,
-    to: String
+    to: String,
+    state: {
+        default: false,
+        required: false,
+        type: Boolean
+    }
 })
 
-const switched = ref(false)
+const emit = defineEmits(['switch'])
+
+const switched = ref(props.state)
+
+function switchInput() {
+    switched.value = !switched.value
+    emit('switch', switched.value)
+}
 </script>
 
 <template>
     <div class="switch_block">
         <span>{{ from }}</span>
-        <div class="switch" :class="switched ? 'switch-on' : ''" @click="switched = !switched">
+        <div class="switch" :class="switched ? 'switch-on' : ''" @click="switchInput">
 
         </div>
         <span>{{ to }}</span>

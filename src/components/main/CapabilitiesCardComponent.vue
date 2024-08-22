@@ -42,7 +42,6 @@ onMounted(async () => {
     padding: 15px;
     transition: background 0.1s ease;
     margin-bottom: 20px;
-    max-height: 80px;
 }
 
 .service_card:hover {

@@ -58,7 +58,6 @@ import TrialImageHero from './TrialImageHero.vue';
     margin: 0px 0px 24px;
     font-family: Feature, Times, serif;
     font-weight: 700;
-    font-size: 40px;
     line-height: calc(1em + 8px);
     letter-spacing: 0.75px;
 }

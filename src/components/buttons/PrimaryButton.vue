@@ -5,7 +5,7 @@ const props = defineProps({
         required: true
     },
     fromBorderColor: {
-        default: '#9a4497',
+        default: '#1A3438',
         type: String,
         required: false
     },
@@ -15,7 +15,7 @@ const props = defineProps({
         required: false
     },
     fromBgColor: {
-        default: '#9a4497',
+        default: '#1A3438',
         type: String,
         required: false
     },
@@ -78,7 +78,7 @@ const style = {
 }
 
 .text_container {
-    padding: 0 10px;
+    padding: 0 20px;
     overflow: hidden;
 }
 
@@ -90,7 +90,7 @@ const style = {
     border: 1px solid var(--from-border-color);
     border-radius: 25px;
     min-width: 100px;
-    height: 40px;
+    height: 50px;
     background-color: var(--from-bg-color);
 
     transition: background-color 500ms cubic-bezier(0.85, 0, 0.15, 1), border 500ms cubic-bezier(0.85, 0, 0.15, 1), transform 500ms cubic-bezier(0.85, 0, 0.15, 1), height 500ms cubic-bezier(0.85, 0, 0.15, 1), opacity 500ms cubic-bezier(0.85, 0, 0.15, 1), width 500ms cubic-bezier(0.85, 0, 0.15, 1), outline 70ms cubic-bezier(0, 0, 0.5, 1);

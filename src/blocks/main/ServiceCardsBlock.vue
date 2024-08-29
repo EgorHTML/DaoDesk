@@ -28,26 +28,26 @@ const leftCards = [
         icon: 'RoutingIcon'
     },
     {
-        title: 'Workforce engagement management',
+        title: 'SLA',
         description: 'Optimize agent staffing and performance.',
         icon: 'WorkforceIcon'
     },
     {
         title: 'Platform',
-        description: 'Modify Zendesk to meet your needs.',
+        description: 'Use plugins to modify DaoDesk to meet your needs.',
         icon: 'PlatformIcon'
     },
 ]
 
 const rightCards = [
     {
-        title: 'AI and automation',
-        description: 'Solve customer issues faster with AI.',
+        title: 'Automation and bot constructor',
+        description: 'Solve customer issues faster with automation.',
         icon: 'AIIcon'
     },
     {
-        title: 'AI agents',
-        description: 'Automate interactions with AI-powered bots.',
+        title: 'AI copilot',
+        description: 'Automate interactions with AI-copilot.',
         icon: 'AgentIcon'
     },
     {
@@ -72,7 +72,7 @@ const rightCards = [
     },
     {
         title: 'Integrations',
-        description: 'Bring your daily systems into Zendesk.',
+        description: 'Bring your daily systems into DaoDesk.',
         icon: 'IntegrationIcon'
     }
 ]

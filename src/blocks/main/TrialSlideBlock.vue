@@ -9,12 +9,14 @@ import TrialImageHero from './TrialImageHero.vue';
             <div class="trial">
                 <div class="description">
                     <h2>
-                        AI-first service. Catered to humans.
+                        DaoDesk. Support with serenity.
                     </h2>
 
-                    <p>Customers and employees are more than interactions, they're human. Give them faster, more
-                        personalized
-                        experiences using AI trained in the art of customer service.</p>
+                    <p>
+                        A user-friendly helpdesk system designed to streamline support and enhance customer
+                        satisfaction. It offers a seamless experience, allowing to resolve users' issues quickly and
+                        efficiently through a calm and intuitive interface.
+                    </p>
 
                     <div class="trial__buttons">
                         <PrimaryButton text="Start your free trial" />
@@ -30,7 +32,7 @@ import TrialImageHero from './TrialImageHero.vue';
     </div>
 </template>
 
-<style scoped>
+<style>
 .trial {
     display: flex;
     align-items: center;
@@ -46,10 +48,12 @@ import TrialImageHero from './TrialImageHero.vue';
 }
 
 .description_img img {
-    width: 600px;
+    font-size: 16px;
+    width: 57em;
+    max-width: 100%;
 }
 
-h2 {
+.description h2 {
     color: rgb(22, 20, 12);
     margin: 0px 0px 24px;
     font-family: Feature, Times, serif;
@@ -57,10 +61,9 @@ h2 {
     font-size: 40px;
     line-height: calc(1em + 8px);
     letter-spacing: 0.75px;
-    font-size: 68px;
 }
 
-p {
+.description p {
     color: rgb(22, 20, 12);
     margin: 0px 0px 12px;
     font-family: "ABC Social", Arial, sans-serif;

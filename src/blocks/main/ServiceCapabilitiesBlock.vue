@@ -1,19 +1,19 @@
 <script setup>
 import ServiceCardsBlock from './ServiceCardsBlock.vue';
-import photo from '../../assets/images/features-desktop.avif'
+import photo from '../../assets/images/capabilitiesImage.png'
 </script>
 
 <template>
     <div class="service_features">
         <div class="service_features__title">
-            <h2>Features</h2>
+            <h6>Features</h6>
         </div>
         <div class="service_capabilities">
             <div class="capabilities_img">
-                <img :src="photo" alt="">
+                <img :src="photo" alt="" style="max-width: 100%;">
             </div>
             <div class="description_service">
-                <h2 class="description_service__title">Explore service capabilities</h2>
+                <h5 class="description_service__title">Explore service capabilities</h5>
                 <ServiceCardsBlock />
             </div>
         </div>
@@ -28,7 +28,6 @@ import photo from '../../assets/images/features-desktop.avif'
 
 .description_service__title {
     margin-bottom: 20px;
-    font-size: 60px;
     width: 100%;
 }
 
@@ -44,6 +43,6 @@ import photo from '../../assets/images/features-desktop.avif'
 }
 
 .description_service {
-    flex: 1 1;
+    flex: 1 1 80%;
 }
 </style>

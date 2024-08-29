@@ -1,3 +1,5 @@
+@import "./media/monitor.css";
+
 *{
     list-style: none;
     padding: 0;
@@ -13,6 +15,32 @@
     width: 80%;
     margin: 0 auto;
 }
+
+:root{
+    --main-bg-elements-color:#1A3438;
+}
+
+h2{
+    font-size: 100px;
+}
+
+h3{
+    font-size: 80px;
+}
+
+h4{
+    font-size: 60px;
+}
+
+h5{
+    font-size: 40px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+
 
 
 

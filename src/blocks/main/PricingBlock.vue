@@ -19,11 +19,10 @@ const priceDescription = computed(() => {
 <template>
     <div class="pricing_platform">
         <div class="pricing_platform__title">
-            <h2>Cost of the platform</h2>
-            <p>We believe that quality products should be available to every business</p>
+            <h4>Cost of the platform</h4>
         </div>
         <div class="card_price">
-            <h2>Online version</h2>
+            <h5>Online version</h5>
             <SwitchInput class="swtch_button" from="Annual fee" to="Monthly fee" :state="stateSwitch"
                 @switch="switchPrice" />
             <div class="price_selection">
@@ -71,7 +70,7 @@ const priceDescription = computed(() => {
 
 .swtch_button {
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     align-self: center;
 }
 
@@ -80,6 +79,7 @@ const priceDescription = computed(() => {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin: 5px 0;
 }
 
 .card_price {
@@ -87,14 +87,14 @@ const priceDescription = computed(() => {
     flex-direction: column;
 }
 
-.card_price h2 {
+.card_price h5 {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 20px;
 }
 
 .pricing_platform {
-    margin: 100px 0;
+    background: rgb(254, 250, 242);
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,10 +104,6 @@ const priceDescription = computed(() => {
     text-align: center;
     margin-bottom: 50px;
     font-weight: 700;
-}
-
-.pricing_platform__title h2 {
-    font-size: 40px;
 }
 
 .pricing_platform__title p {
@@ -128,8 +124,8 @@ const priceDescription = computed(() => {
     position: absolute;
     width: 11px;
     height: 5px;
-    border-left: 2px solid rgb(154, 68, 151);
-    border-bottom: 2px solid rgb(154, 68, 151);
+    border-left: 2px solid var(--main-bg-elements-color);
+    border-bottom: 2px solid var(--main-bg-elements-color);
     transform: rotate(-45deg);
     left: -17px;
     top: 3px;

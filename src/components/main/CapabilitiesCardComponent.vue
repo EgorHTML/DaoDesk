@@ -25,7 +25,7 @@ onMounted(async () => {
             <component :is="svg" width="30" height="30"></component>
         </div>
         <div class="card_body">
-            <h2>{{ title }}</h2>
+            <h6>{{ title }}</h6>
             <div class="description_card">
                 <p>
                     {{ description }}

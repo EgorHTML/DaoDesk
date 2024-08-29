@@ -42,7 +42,7 @@ function switchInput() {
     width: 60px;
     height: 30px;
     border-radius: 30px;
-    background-color: rgb(154, 68, 151);
+    background-color: var(--main-bg-elements-color);
     position: relative;
     cursor: pointer;
 
@@ -68,7 +68,7 @@ function switchInput() {
     border-radius: 50%;
     background: #fff;
     transition: all 200ms ease;
-    left: 31px;
+    left: 32px;
     top: 2px;
 }
 </style>

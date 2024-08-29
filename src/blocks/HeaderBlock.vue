@@ -79,7 +79,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 .main_header__navigation li span::after {
     content: "";
     height: 3px;
-    background: #000;
+    background: var(--main-bg-elements-color);
     bottom: 0px;
     position: absolute;
     left: 0px;

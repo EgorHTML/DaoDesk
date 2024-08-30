@@ -40,6 +40,7 @@ import photo from '../../assets/images/capabilitiesImage.png'
     margin-top: 40px;
     display: flex;
     gap: 10%;
+    align-items: center;
 }
 
 .description_service {

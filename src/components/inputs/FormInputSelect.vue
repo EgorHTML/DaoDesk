@@ -1,9 +1,12 @@
 <script setup>
+import { inject } from 'vue';
 
+
+const settings = inject('settings')
 </script>
 
 <template>
-    <select class="" name="employee">
+    <select class="" :name="settings.name">
         <option value="" selected="selected"></option>
         <option value="0">1-5</option>
         <option value="1">5-10</option>

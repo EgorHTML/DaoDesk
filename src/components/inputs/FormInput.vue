@@ -2,7 +2,7 @@
 import StarIcon from '../icons/StarIcon.vue'
 import FormInputText from './FormInputText.vue'
 import FormInputSelect from './FormInputSelect.vue'
-import { computed, onMounted, shallowRef } from 'vue';
+import { computed, onMounted, provide, shallowRef,ref } from 'vue';
 
 const props = defineProps({
     required: {
@@ -28,13 +28,14 @@ const props = defineProps({
 })
 
 const inputComponent = shallowRef()
-
+provide('settings', props)
 onMounted(() => {
     const inputComponents = {
+        'password': FormInputText,
         'text': FormInputText,
         'select': FormInputSelect,
     }
-    
+
     inputComponent.value = inputComponents[props.type]
 })
 
@@ -45,7 +46,7 @@ onMounted(() => {
     <label for="fullname" class="form_input required">
 
         <span>{{ label }}</span>
-        <component :name="name" :is="inputComponent"></component>
+        <component :is="inputComponent"></component>
 
         <StarIcon v-if="required" />
     </label>
@@ -79,8 +80,6 @@ onMounted(() => {
     height: 45px;
     font-size: 17px;
     color: #333;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
 }

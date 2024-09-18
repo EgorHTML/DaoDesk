@@ -1,9 +1,11 @@
 <script setup>
-defineProps(['name', 'type'])
+import { inject } from 'vue';
+
+const settings = inject('settings')
 </script>
 
 <template>
-    <input :type="type" :name="name">
+    <input :type="settings?.type" :name="settings?.name">
 </template>
 
 <style></style>

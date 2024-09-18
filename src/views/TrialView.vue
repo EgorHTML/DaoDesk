@@ -23,13 +23,13 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
                     <FormInput label="Domain address" required type="text" />
                 </div>
                 <div class="div4">
-                    <FormInput label="password" required type="text" />
+                    <FormInput label="password" required type="password" />
                 </div>
                 <div class="div5">
                     <FormInput label="Promo code" type="text" />
                 </div>
                 <div class="div6">
-                    <PrimaryButton text="Sign Up"/>
+                    <PrimaryButton width="100%" height="70px" border-radius="70px" text="Sign Up"/>
                 </div>
             </div>
         </div>
@@ -51,5 +51,9 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 
 .div3{
     grid-column-start: span 2;
+}
+
+.div6{
+    grid-column-start: 2;
 }
 </style>

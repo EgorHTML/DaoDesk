@@ -42,6 +42,21 @@ const props = defineProps({
         default: '/',
         type: String,
         required: false
+    },
+    width: {
+        default: '100px',
+        type: String,
+        required: false
+    },
+    height: {
+        default: '50px',
+        type: String,
+        required: false
+    },
+    borderRadius: {
+        default: '15px',
+        type: String,
+        required: false
     }
 })
 
@@ -51,7 +66,10 @@ const style = {
     '--from-bg-color': props.fromBgColor,
     '--to-bg-color': props.toBgColor,
     '--from-font-color': props.fromFontColor,
-    '--to-font-color': props.toFontColor
+    '--to-font-color': props.toFontColor,
+    '--button-width-min': props.width,
+    '--button-height': props.height,
+    '--button-border-radius': props.borderRadius
 }
 
 function redirect() {
@@ -101,9 +119,9 @@ function redirect() {
     color: var(--from-font-color);
     outline: 0;
     border: 1px solid var(--from-border-color);
-    border-radius: 15px;
-    min-width: 100px;
-    height: 50px;
+    border-radius: var(--button-border-radius);
+    min-width: var(--button-width-min);
+    height: var(--button-height);
     background-color: var(--from-bg-color);
 
     transition: background-color 500ms cubic-bezier(0.85, 0, 0.15, 1), border 500ms cubic-bezier(0.85, 0, 0.15, 1), transform 500ms cubic-bezier(0.85, 0, 0.15, 1), height 500ms cubic-bezier(0.85, 0, 0.15, 1), opacity 500ms cubic-bezier(0.85, 0, 0.15, 1), width 500ms cubic-bezier(0.85, 0, 0.15, 1), outline 70ms cubic-bezier(0, 0, 0.5, 1);

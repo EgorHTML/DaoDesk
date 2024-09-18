@@ -1,4 +1,8 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
 const props = defineProps({
     text: {
         type: String,
@@ -33,6 +37,11 @@ const props = defineProps({
         default: '#fff',
         type: String,
         required: false
+    },
+    redirect: {
+        default: '/',
+        type: String,
+        required: false
     }
 })
 
@@ -44,10 +53,14 @@ const style = {
     '--from-font-color': props.fromFontColor,
     '--to-font-color': props.toFontColor
 }
+
+function redirect() {
+    router.push(props.redirect)
+}
 </script>
 
 <template>
-    <button class="primary_button" :style="style">
+    <button class="primary_button" :style="style" @click="redirect">
         <div class="text_container">
             <span>
                 {{ text }}
@@ -88,7 +101,7 @@ const style = {
     color: var(--from-font-color);
     outline: 0;
     border: 1px solid var(--from-border-color);
-    border-radius: 25px;
+    border-radius: 15px;
     min-width: 100px;
     height: 50px;
     background-color: var(--from-bg-color);

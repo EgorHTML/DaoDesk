@@ -1,6 +1,6 @@
 <script setup>
 import PrimaryButton from '../../components/buttons/PrimaryButton.vue';
-import TrialImageHero from './TrialImageHero.vue';
+import TrialImage from '../../assets/images/trialImage.png';
 </script>
 
 <template>
@@ -25,7 +25,7 @@ import TrialImageHero from './TrialImageHero.vue';
                     </div>
                 </div>
                 <div class="description_img">
-                    <TrialImageHero />
+                    <img :src="TrialImage" alt="">
                 </div>
             </div>
         </div>
@@ -35,7 +35,6 @@ import TrialImageHero from './TrialImageHero.vue';
 <style>
 .trial {
     display: flex;
-    align-items: center;
 }
 
 .description {

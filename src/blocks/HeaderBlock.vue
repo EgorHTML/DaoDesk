@@ -4,34 +4,40 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 </script>
 
 <template>
-    <header class="main_header">
-        <div class="logo">
-            <DaoDeskLogo />
-        </div>
-        <nav>
-            <ul class="main_header__navigation">
-                <li>
-                    <span>About us</span>
-                </li>
-                <li>
-                    <span>Pricing</span>
-                </li>
-                <li>
-                    <span>Demo</span>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <ul class="main_header__buttons">
-                <li>
-                    <PrimaryButton text="free trial" />
-                </li>
-                <li>
-                    <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff" fromFontColor="#000" />
-                </li>
-            </ul>
-        </div>
-    </header>
+    <div class="header_container">
+        <header class="main_header">
+            <div class="logo">
+                <RouterLink to="/">
+                    <DaoDeskLogo />
+                </RouterLink>
+            </div>
+            <nav>
+                <ul class="main_header__navigation">
+                    <li>
+                        <span>About us</span>
+                    </li>
+                    <li>
+                        <span>Pricing</span>
+                    </li>
+                    <li>
+                        <span>
+                            <RouterLink to="/trial">Demo</RouterLink>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <ul class="main_header__buttons">
+                    <li>
+                        <PrimaryButton text="Free trial" redirect="/trial" />
+                    </li>
+                    <li>
+                        <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff" fromFontColor="#000" />
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
 </template>
 
 <style>
@@ -39,6 +45,10 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 .main_header__buttons,
 .main_header {
     display: flex;
+}
+
+.header_container {
+    padding-bottom: 90px;
 }
 
 .main_header {

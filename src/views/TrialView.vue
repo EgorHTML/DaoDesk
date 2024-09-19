@@ -29,7 +29,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
                     <FormInput label="Promo code" type="text" />
                 </div>
                 <div class="div6">
-                    <PrimaryButton width="100%" height="70px" border-radius="70px" text="Sign Up"/>
+                    <PrimaryButton width="100%" height="70px" border-radius="70px" text="Sign Up" font-size="22px"/>
                 </div>
             </div>
         </div>
@@ -43,10 +43,15 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
     margin: 20px 0;
 }
 
+.trail_form{
+    margin-bottom: 50px;
+}
+
 .trial_fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 50px;
+    margin: 50px 0;
 }
 
 .div3{

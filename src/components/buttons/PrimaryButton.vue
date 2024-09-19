@@ -57,6 +57,11 @@ const props = defineProps({
         default: '15px',
         type: String,
         required: false
+    },
+    fontSize: {
+        default: '14px',
+        type: String,
+        required: false
     }
 })
 
@@ -69,7 +74,8 @@ const style = {
     '--to-font-color': props.toFontColor,
     '--button-width-min': props.width,
     '--button-height': props.height,
-    '--button-border-radius': props.borderRadius
+    '--button-border-radius': props.borderRadius,
+    '--button-font-size':props.fontSize
 }
 
 function redirect() {
@@ -123,7 +129,7 @@ function redirect() {
     min-width: var(--button-width-min);
     height: var(--button-height);
     background-color: var(--from-bg-color);
-
+    font-size: var(--button-font-size);
     transition: background-color 500ms cubic-bezier(0.85, 0, 0.15, 1), border 500ms cubic-bezier(0.85, 0, 0.15, 1), transform 500ms cubic-bezier(0.85, 0, 0.15, 1), height 500ms cubic-bezier(0.85, 0, 0.15, 1), opacity 500ms cubic-bezier(0.85, 0, 0.15, 1), width 500ms cubic-bezier(0.85, 0, 0.15, 1), outline 70ms cubic-bezier(0, 0, 0.5, 1);
 }
 

@@ -8,8 +8,8 @@
 
 <style>
 .star_icon {
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     position: relative;
     font-size: 10px;
     color: #b8b8b8;
@@ -17,10 +17,13 @@
 
 .star_icon.line {
     position: absolute;
-    width: 4px;
+    width: 3px;
     background-color: #b8b8b8;
     border-radius: 1px;
+}
 
+.star_icon.line:nth-child(1) {
+    width: 2.5px;
 }
 
 .star_icon.line:nth-child(2) {

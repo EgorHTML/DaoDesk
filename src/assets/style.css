@@ -1,10 +1,12 @@
 @import "./media/monitor.css";
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
 @font-face{font-family:hdes;src:url('https://helpdeskeddy.ru/fonts/hdes.eot?xufyp1');src:url('https://helpdeskeddy.ru/fonts/hdes.eot?xufyp1#iefix') format('embedded-opentype'),url('https://helpdeskeddy.ru/fonts/hdes.ttf?xufyp1') format('truetype'),url('https://helpdeskeddy.ru/fonts/hdes.woff?xufyp1') format('woff'),url('https://helpdeskeddy.ru/fonts/hdes.svg?xufyp1#hdes') format('svg');font-weight:400;font-style:normal;font-display:block}
 *{
     list-style: none;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-family: "Metrophobic", sans-serif;
 }
 
 a{

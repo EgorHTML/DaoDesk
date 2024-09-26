@@ -55,7 +55,6 @@ import TrialImage from '../../assets/images/trialImage.png';
 .description h2 {
     color: rgb(22, 20, 12);
     margin: 0px 0px 24px;
-    font-family: Feature, Times, serif;
     font-weight: 700;
     line-height: calc(1em + 8px);
     letter-spacing: 0.75px;
@@ -64,7 +63,6 @@ import TrialImage from '../../assets/images/trialImage.png';
 .description p {
     color: rgb(22, 20, 12);
     margin: 0px 0px 12px;
-    font-family: "ABC Social", Arial, sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: calc(1em + 8px);

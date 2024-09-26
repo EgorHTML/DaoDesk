@@ -17,7 +17,7 @@ const priceDescription = computed(() => {
 </script>
 
 <template>
-    <div class="pricing_platform">
+    <div class="pricing_platform" id="price">
         <div class="pricing_platform__title">
             <h4>Cost of the platform</h4>
         </div>
@@ -62,7 +62,6 @@ const priceDescription = computed(() => {
 
 .card_cost {
     font-size: 60px;
-    font-family: GothamProBold;
     line-height: 60px;
     float: right;
     text-align: right;
@@ -94,7 +93,7 @@ const priceDescription = computed(() => {
 
 .pricing_platform {
     background: rgb(254, 250, 242);
-    padding: 100px 0;
+    padding: 5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;

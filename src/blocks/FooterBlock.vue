@@ -1,7 +1,7 @@
 <script setup>
 const footer = {
     'Products': ['Pricing', 'Integrations', 'Sign in'],
-    'Features': ['Messaging and live chat', 'AI and automation', 'Ticketing', 'Knowledge base'],
+    'Features': ['Real-time messaging', 'AI and automation', 'Ticketing', 'Knowledge base'],
     'Company': ['About us']
 }
 </script>

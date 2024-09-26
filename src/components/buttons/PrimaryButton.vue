@@ -39,7 +39,6 @@ const props = defineProps({
         required: false
     },
     redirect: {
-        default: '/',
         type: String,
         required: false
     },

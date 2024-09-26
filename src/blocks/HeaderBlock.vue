@@ -14,10 +14,10 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
             <nav>
                 <ul class="main_header__navigation">
                     <li>
-                        <span>About us</span>
+                        <span><RouterLink to="/about">About us</RouterLink></span>
                     </li>
                     <li>
-                        <span>Pricing</span>
+                        <span><RouterLink to="/#price">Pricing</RouterLink></span>
                     </li>
                     <li>
                         <span>

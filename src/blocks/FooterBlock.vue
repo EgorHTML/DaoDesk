@@ -1,8 +1,45 @@
 <script setup>
 const footer = {
-    'Products': ['Pricing', 'Integrations', 'Sign in'],
-    'Features': ['Real-time messaging', 'AI and automation', 'Ticketing', 'Knowledge base'],
-    'Company': ['About us']
+    'Products': [
+        {
+            label: 'Pricing',
+            url: '/#price'
+        },
+        {
+            label: 'Integrations',
+            url: ''
+        },
+        {
+            label: 'Sign in',
+            url: ''
+        }
+    ],
+    'Features': [{
+        label: 'Real-time messaging',
+        url: '/realTimeMessaging'
+    },
+    {
+        label: 'AI and automation',
+        url: ''
+    },
+    {
+        label: 'Ticketing',
+        url: ''
+    },
+    {
+        label: 'Knowledge base',
+        url: ''
+    }],
+    'Company': [
+        {
+            label: 'About us',
+            url: '/about'
+        }
+    ]
+}
+
+const routes = {
+    'Real-time messaging': '/Real-time-messaging'
 }
 </script>
 
@@ -13,7 +50,7 @@ const footer = {
                 <div class="footer_title"> {{ title }} </div>
                 <div class="footer_list">
                     <ul>
-                        <li v-for="item in list" :key="item">{{ item }}</li>
+                        <li v-for="item in list" :key="item"> <RouterLink :to="item.url">{{ item.label }}</RouterLink> </li>
                     </ul>
                 </div>
             </div>
@@ -44,6 +81,10 @@ footer {
 .footer_list li {
     margin: 16px 0;
     cursor: pointer;
+}
+
+.footer_list li a{
+    color: rgb(246, 240, 230);
 }
 
 .footer_list li:hover {

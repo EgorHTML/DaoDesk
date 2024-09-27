@@ -14,15 +14,13 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
             <nav>
                 <ul class="main_header__navigation">
                     <li>
-                        <span><RouterLink to="/about">About us</RouterLink></span>
+                        <RouterLink to="/about"><span>About us</span></RouterLink>
                     </li>
                     <li>
-                        <span><RouterLink to="/#price">Pricing</RouterLink></span>
+                        <RouterLink to="/#price"><span>Pricing</span></RouterLink>
                     </li>
                     <li>
-                        <span>
-                            <RouterLink to="/trial">Demo</RouterLink>
-                        </span>
+                        <RouterLink to="/trial"><span>Demo</span></RouterLink>
                     </li>
                 </ul>
             </nav>
@@ -79,7 +77,8 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
     align-items: center;
 }
 
-.main_header__navigation li {
+.main_header__navigation li,
+.main_header__navigation a {
     height: 100%;
     display: flex;
     align-items: center;

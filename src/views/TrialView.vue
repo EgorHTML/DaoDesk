@@ -39,7 +39,7 @@ watchEffect(()=>{
                     <FormInput label="Promo code" type="text" />
                 </div>
                 <div class="col6">
-                    <PrimaryButton width="100%" height="70px" border-radius="70px" text="Sign Up" font-size="22px" />
+                    <PrimaryButton width="80%" height="60px" border-radius="70px" text="Sign Up" font-size="20px" />
                 </div>
             </div>
         </div>
@@ -78,6 +78,8 @@ watchEffect(()=>{
 }
 
 .col6 {
+    display: flex;
+    justify-content: center;
     grid-column-start: 2;
 }
 </style>

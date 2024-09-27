@@ -32,7 +32,7 @@ const priceDescription = computed(() => {
                     <p>({{ priceDescription.text }})</p>
                 </div>
             </div>
-            <PrimaryButton style="align-self: center; font-size: 18px; padding: 10px;" text="Free trial" />
+            <PrimaryButton redirect="/trial" style="align-self: center; font-size: 18px; padding: 10px;" text="Free trial" />
             <div class="pricing_platform__description">
                 <ul>
                     <li>Connecting email and telephony</li>

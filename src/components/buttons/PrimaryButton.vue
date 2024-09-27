@@ -74,11 +74,12 @@ const style = {
     '--button-width-min': props.width,
     '--button-height': props.height,
     '--button-border-radius': props.borderRadius,
-    '--button-font-size':props.fontSize
+    '--button-font-size': props.fontSize
 }
 
 function redirect() {
-    router.push(props.redirect)
+    if (props.redirect)
+        router.push(props.redirect)
 }
 </script>
 

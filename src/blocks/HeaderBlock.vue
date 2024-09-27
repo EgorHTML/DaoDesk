@@ -5,34 +5,38 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 
 <template>
     <div class="header_container">
+
         <header class="main_header">
-            <div class="logo">
-                <RouterLink to="/">
-                    <DaoDeskLogo />
-                </RouterLink>
-            </div>
-            <nav>
-                <ul class="main_header__navigation">
-                    <li>
-                        <RouterLink to="/about"><span>About us</span></RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/#price"><span>Pricing</span></RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/trial"><span>Demo</span></RouterLink>
-                    </li>
-                </ul>
-            </nav>
-            <div>
-                <ul class="main_header__buttons">
-                    <li>
-                        <PrimaryButton text="Free trial" redirect="/trial" />
-                    </li>
-                    <li>
-                        <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff" fromFontColor="#000" />
-                    </li>
-                </ul>
+            <div class="main_header__container">
+                <div class="logo">
+                    <RouterLink to="/">
+                        <DaoDeskLogo />
+                    </RouterLink>
+                </div>
+                <nav>
+                    <ul class="main_header__navigation">
+                        <li>
+                            <RouterLink to="/about"><span>About us</span></RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/#price"><span>Pricing</span></RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/trial"><span>Demo</span></RouterLink>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <ul class="main_header__buttons">
+                        <li>
+                            <PrimaryButton text="Free trial" redirect="/trial" />
+                        </li>
+                        <li>
+                            <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff"
+                                fromFontColor="#000" />
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
     </div>
@@ -41,23 +45,31 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 <style>
 .main_header__navigation,
 .main_header__buttons,
-.main_header {
+.main_header,.main_header__container {
     display: flex;
+    padding: 0 calc(20px - (100vw - 100%)) 0 0;
 }
 
 .header_container {
+    padding: 0 calc(20px - (100vw - 100%)) 0 0;
     padding-bottom: 90px;
 }
 
 .main_header {
     width: 100%;
-    align-items: center;
-    font-size: 20px;
-    justify-content: space-around;
+    justify-content: center;
     height: 80px;
     border-bottom: 1px solid rgba(202, 194, 178, 0.85);
     position: fixed;
     background: rgb(254, 250, 242);
+    z-index: 1000;
+}
+
+.main_header__container{
+    width: 1000px;
+    align-items: center;
+    font-size: 20px;
+    justify-content: space-around;
     z-index: 1000;
 }
 
@@ -70,6 +82,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 }
 
 .main_header__navigation {
+    padding: 0 calc(20px - (100vw - 100%)) 0 0;
     height: 100%;
     gap: 30px;
     margin-left: 50px;

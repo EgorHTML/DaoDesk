@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <main class="main_container">
+    <main class="main_container content_center">
         <h5 class="block-title">Comprehensive Multi-Channel Helpdesk Solutions: Messaging, Emails, Social media and more</h5>
 
         <p class="paragraph">

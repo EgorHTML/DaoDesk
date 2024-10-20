@@ -35,6 +35,17 @@ a{
     margin-bottom: 15px;
 }
 
+.content_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block-title {
+    text-align: center;
+    margin:25px 0;
+}
+
 :root{
     --main-bg-elements-color:#1A3438;
 }

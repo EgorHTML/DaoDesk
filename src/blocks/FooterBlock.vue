@@ -1,35 +1,35 @@
 <script setup>
+import Link from '../components/buttons/Link.vue';
+
 const footer = {
-    'Products': [
+    'Product': [
         {
             label: 'Pricing',
             url: '/#price'
         },
         {
-            label: 'Integrations',
-            url: ''
+            label: 'Technical support',
+            url: 'https://support.daodesk.ai'
         },
         {
-            label: 'Sign in',
-            url: ''
+            label: 'Knowledge base',
+            url: 'https://support.daodesk.ai/en/knowledge_base/'
         }
     ],
-    'Features': [{
-        label: 'Real-time messaging',
-        url: '/realTimeMessaging'
-    },
-    {
-        label: 'AI and automation',
-        url: ''
-    },
-    {
-        label: 'Ticketing',
-        url: ''
-    },
-    {
-        label: 'Knowledge base',
-        url: ''
-    }],
+    'Features': [
+        {
+            label: 'Real-time messaging',
+            url: '/realTimeMessaging'
+        },
+        {
+            label: 'AI and automation',
+            url: 'ai'
+        },
+        {
+            label: 'Ticketing',
+            url: 'tiketing'
+        }
+    ],
     'Company': [
         {
             label: 'About us',
@@ -50,7 +50,9 @@ const routes = {
                 <div class="footer_title"> {{ title }} </div>
                 <div class="footer_list">
                     <ul>
-                        <li v-for="item in list" :key="item"> <RouterLink :to="item.url">{{ item.label }}</RouterLink> </li>
+                        <li v-for="item in list" :key="item.url">
+                            <Link :to="item.url">{{ item.label }}</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +85,7 @@ footer {
     cursor: pointer;
 }
 
-.footer_list li a{
+.footer_list li a {
     color: rgb(246, 240, 230);
 }
 

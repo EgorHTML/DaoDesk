@@ -36,8 +36,6 @@ const priceDescription = computed(() => {
             <div class="pricing_platform__description">
                 <ul>
                     <li>Connecting email and telephony</li>
-                    <li>Connecting email and telephony (Facebook, Instagram, VK)
-                    </li>
                     <li>Connecting messengers (Whatsapp, Viber, Telegram, Messenger)</li>
                     <li>Unlimited number of requests</li>
                     <li>History of all contacts with the client
@@ -47,7 +45,7 @@ const priceDescription = computed(() => {
                     <li>Reply templates</li>
                     <li>Reports and analytics</li>
                     <li>Knowledge base for agents and customers</li>
-                    <li>Over 100 integrations + API</li>
+                    <li>Over 30 integrations + API</li>
                     <li>Help from our experts</li>
                 </ul>
             </div>

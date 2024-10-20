@@ -51,10 +51,3 @@
 
     </main>
 </template>
-
-<style>
-.block-title {
-    text-align: center;
-    margin: 70px 0 25px;
-}
-</style>

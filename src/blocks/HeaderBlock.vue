@@ -31,10 +31,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
                         <li>
                             <PrimaryButton text="Free trial" redirect="/trial" />
                         </li>
-                        <li>
-                            <PrimaryButton text="Buy now" fromBorderColor="#000" fromBgColor="#fff"
-                                fromFontColor="#000" />
-                        </li>
+                       
                     </ul>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import MainView from '../views/MainView.vue'
-import TrialView from '../views/TrialView.vue'
-import AboutView from '../views/AboutView.vue'
-import RealTmeMessaging from '../views/RealTmeMessaging.vue'
-import AIandAutomationView from '../views/AIandAutomationView.vue'
-import TicketingView from '../views/TicketingView.vue'
+const MainView = () => import('../views/MainView.vue')
+const TrialView = () => import('../views/TrialView.vue')
+const AboutView = () => import('../views/AboutView.vue')
+const RealTmeMessaging = () => import('../views/RealTmeMessaging.vue')
+const AIandAutomationView = () => import('../views/AIandAutomationView.vue')
+const TicketingView = () => import('../views/TicketingView.vue')
 
 const routes = [
     { path: '/', component: MainView },
@@ -23,6 +23,8 @@ const router = createRouter({
                 el: to.hash,
                 behavior: 'smooth',
             }
+        }else{
+            return {top:0}
         }
     },
     history: createWebHistory(),

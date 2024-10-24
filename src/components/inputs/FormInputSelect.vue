@@ -1,21 +1,15 @@
 <script setup>
 import { inject } from 'vue';
 
-
 const settings = inject('settings')
+console.log(settings);
+
 </script>
 
 <template>
     <select class="" :name="settings.name">
         <option value="" selected="selected"></option>
-        <option value="0">1-5</option>
-        <option value="1">5-10</option>
-        <option value="2">10-15</option>
-        <option value="3">15-25</option>
-        <option value="4">25-50</option>
-        <option value="5">50-100</option>
-        <option value="6">100-250</option>
-        <option value="7">250+</option>
+        <option :value="i" v-for="(option,i) in settings.options">{{ option }}</option>
     </select>
 
 </template>

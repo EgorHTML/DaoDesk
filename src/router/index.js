@@ -6,6 +6,7 @@ const AboutView = () => import('../views/AboutView.vue')
 const RealTmeMessaging = () => import('../views/RealTmeMessaging.vue')
 const AIandAutomationView = () => import('../views/AIandAutomationView.vue')
 const TicketingView = () => import('../views/TicketingView.vue')
+const ContactsView = () => import('../views/ContactsView.vue')
 
 const routes = [
     { path: '/', component: MainView },
@@ -14,6 +15,7 @@ const routes = [
     { path: '/realTimeMessaging', component: RealTmeMessaging },
     { path: '/ai', component: AIandAutomationView },
     { path: '/tiketing', component: TicketingView },
+    { path: '/contacts', component: ContactsView },
 ]
 
 const router = createRouter({

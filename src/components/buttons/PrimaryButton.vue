@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import { computed } from 'vue';
 
 const router = useRouter()
 
@@ -64,6 +65,8 @@ const props = defineProps({
     }
 })
 
+const isExternalLink = computed(() => typeof props.redirect === 'string' && props.redirect.startsWith('http'))
+
 const style = {
     '--from-border-color': props.fromBorderColor,
     '--to-border-color': props.toBorderColor,
@@ -78,6 +81,9 @@ const style = {
 }
 
 function redirect() {
+    if (isExternalLink.value)
+        window.location.replace(props.redirect)
+
     if (props.redirect)
         router.push(props.redirect)
 }

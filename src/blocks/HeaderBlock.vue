@@ -22,7 +22,7 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
                             <RouterLink to="/#price"><span>Pricing</span></RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/trial"><span>Demo</span></RouterLink>
+                            <RouterLink to="/contacts"><span>Contacts</span></RouterLink>
                         </li>
                     </ul>
                 </nav>
@@ -49,7 +49,6 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
 
 .header_container {
     padding: 0 calc(20px - (100vw - 100%)) 0 0;
-    padding-bottom: 90px;
 }
 
 .main_header {

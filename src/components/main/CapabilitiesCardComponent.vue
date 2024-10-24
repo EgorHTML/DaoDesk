@@ -37,6 +37,7 @@ onMounted(async () => {
 
 <style scoped>
 .service_card {
+    cursor: default;
     display: flex;
     gap: 10px;
     padding: 15px;

@@ -1,5 +1,5 @@
 <template>
-    <main class="main_container content_center">
+    <div class="main_container content_center">
         <h5 class="block-title">Ticketing in DaoDesk: Simplifying Helpdesk Workflows</h5>
 
         <p class="paragraph">
@@ -22,5 +22,5 @@
             The system allows for a streamlined process, helping agents stay on top of their workload and respond
             effectively. The result? Better organization, faster resolutions, and happier customers.
         </p>
-    </main>
+    </div>
 </template>

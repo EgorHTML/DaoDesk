@@ -5,9 +5,7 @@ import PricingBlock from '../blocks/main/PricingBlock.vue'
 </script>
 
 <template>
-    <main>
-        <TrialSlideBlock />
-        <ServiceCapabilitiesBlock />
-        <PricingBlock />
-    </main>
+    <TrialSlideBlock />
+    <ServiceCapabilitiesBlock />
+    <PricingBlock />
 </template>

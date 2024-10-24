@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <main class="main_container content_center">
+    <div class="main_container content_center">
         <h5 class="block-title">Comprehensive Multi-Channel Helpdesk Solutions: Messaging, Emails, Social media and more</h5>
 
         <p class="paragraph">
@@ -26,5 +26,5 @@
             With this solution, businesses can build stronger customer relationships, improve response times, and ensure
         consistent, quality service across all platforms.
         </p>
-    </main>
+    </div>
 </template>

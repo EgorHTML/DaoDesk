@@ -19,9 +19,7 @@ import TrialImage from '../../assets/images/trialImage.png';
                     </p>
 
                     <div class="trial__buttons">
-                        <PrimaryButton text="Start your free trial" />
-                        <PrimaryButton text="View demo" fromBorderColor="#000" fromBgColor="#fff"
-                            fromFontColor="#000" />
+                        <PrimaryButton redirect="trial" text="Start your free trial" />
                     </div>
                 </div>
                 <div class="description_img">

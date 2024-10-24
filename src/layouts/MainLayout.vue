@@ -6,7 +6,9 @@ import FooterBlock from '../blocks/FooterBlock.vue';
 <template>
     <div class="container">
         <HeaderBlock />
-        <RouterView />
+        <main>
+            <RouterView />
+        </main>
         <FooterBlock />
     </div>
 </template>
@@ -20,5 +22,9 @@ import FooterBlock from '../blocks/FooterBlock.vue';
 
 main {
     flex: 1 1;
+}
+
+main > div:first-child {
+    padding-top: 90px;
 }
 </style>

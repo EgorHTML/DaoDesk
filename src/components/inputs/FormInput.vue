@@ -3,6 +3,7 @@ import StarIcon from '../icons/StarIcon.vue'
 import FormInputText from './FormInputText.vue'
 import FormInputSelect from './FormInputSelect.vue'
 import { computed, onMounted, provide, shallowRef, ref, watchEffect } from 'vue';
+import FormInputTextarea from './FormInputTextarea.vue';
 
 const props = defineProps({
     required: {
@@ -29,6 +30,13 @@ const props = defineProps({
         default: '',
         type: String,
         required: false
+    },
+    options:{
+        default(){
+            return []
+        },
+        required:false,
+        type:Array
     }
 })
 
@@ -43,6 +51,7 @@ onMounted(() => {
         'password': FormInputText,
         'text': FormInputText,
         'select': FormInputSelect,
+        'textarea':FormInputTextarea
     }
 
     inputComponent.value = inputComponents[props.type]

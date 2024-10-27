@@ -1,12 +1,24 @@
 @import "./media/monitor.css";
 @import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
-@font-face{font-family:hdes;src:url('https://helpdeskeddy.ru/fonts/hdes.eot?xufyp1');src:url('https://helpdeskeddy.ru/fonts/hdes.eot?xufyp1#iefix') format('embedded-opentype'),url('https://helpdeskeddy.ru/fonts/hdes.ttf?xufyp1') format('truetype'),url('https://helpdeskeddy.ru/fonts/hdes.woff?xufyp1') format('woff'),url('https://helpdeskeddy.ru/fonts/hdes.svg?xufyp1#hdes') format('svg');font-weight:400;font-style:normal;font-display:block}
 *{
     list-style: none;
     padding: 0;
     margin: 0;
     text-decoration: none;
     font-family: "Metrophobic", sans-serif;
+}
+
+@font-face {
+    font-family: hdes;
+    src: url('/fonts/hdes.eot?xufyp1');
+    src: url('/fonts/hdes.eot?xufyp1#iefix') format('embedded-opentype'),url('/fonts/hdes.ttf?xufyp1') format('truetype'),url('/fonts/hdes.woff?xufyp1') format('woff'),url('/fonts/hdes.svg?xufyp1#hdes') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
+
+:root{
+    --main-bg-elements-color:#1A3438;
 }
 
 html {
@@ -35,6 +47,20 @@ a{
     margin-bottom: 15px;
 }
 
+a, img {
+    transition: .2s ease-in-out;
+}
+
+.contact-list .offerta, .contact-list ul li a:hover, .private-policy-url, .try-free-page h2 a {
+    color: #2c9b75;
+    text-decoration: underline;
+}
+
+.blog-categories a.active, .blog-categories a:hover, .our-partners .our-partners-short a, .main_container a {
+    color: #2c9b75;
+    text-decoration: none;
+}
+
 .content_center{
     display: flex;
     flex-direction: column;
@@ -48,10 +74,6 @@ a{
 
 .paragraph-title {
     margin:25px 0;
-}
-
-:root{
-    --main-bg-elements-color:#1A3438;
 }
 
 h2{
@@ -73,6 +95,8 @@ h5{
 h6{
     font-size: 1.25em;
 }
+
+
 
 
 

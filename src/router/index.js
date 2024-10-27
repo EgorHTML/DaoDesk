@@ -7,6 +7,7 @@ const RealTmeMessaging = () => import('../views/RealTmeMessaging.vue')
 const AIandAutomationView = () => import('../views/AIandAutomationView.vue')
 const TicketingView = () => import('../views/TicketingView.vue')
 const ContactsView = () => import('../views/ContactsView.vue')
+const Offerta = () => import('../views/PublicOfferView.vue')
 
 const routes = [
     { path: '/', component: MainView },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/ai', component: AIandAutomationView },
     { path: '/tiketing', component: TicketingView },
     { path: '/contacts', component: ContactsView },
+    { path: '/public-offer', component: Offerta },
 ]
 
 const router = createRouter({
@@ -23,6 +25,7 @@ const router = createRouter({
         if (to.hash) {
             return {
                 el: to.hash,
+                top: 100,
                 behavior: 'smooth',
             }
         }else{

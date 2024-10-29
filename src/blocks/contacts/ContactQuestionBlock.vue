@@ -7,7 +7,7 @@ const agents = ['1-5','5-10','10-15','15-25','25-50','50-100','100-250','250+']
 </script>
 
 <template>
-   <div class="question_form">
+   <form class="question_form" @submit.prevent>
             <div class="col1">
                 <FormInput label="Your name" required type="text" />
                 <FormInput label="Your email" required type="text" />
@@ -28,7 +28,7 @@ const agents = ['1-5','5-10','10-15','15-25','25-50','50-100','100-250','250+']
                 <PrimaryButton width="80%" height="60px" border-radius="70px" text="Submit a question"
                     font-size="20px" />
             </div>
-        </div>
+        </form>
 </template>
 
 <style scoped>

@@ -6,7 +6,6 @@ const model = defineModel()
 
 const afterTemplate = settings.afterTemplate
 
-const input = ref()
 const template = ref()
 
 watchEffect(() => {
@@ -20,9 +19,8 @@ watchEffect(() => {
 
 <template>
     <div style="position: relative;">
-        <textarea :name="settings?.name" v-model="model"></textarea>
-        <input type="textarea" v-model="template" v-if="afterTemplate"
-            style="position: absolute; left: 0;z-index: -1; color: #adadad;" disabled>
+        <textarea  v-bind="settings"  v-model="model"></textarea>
+
 
     </div>
     </input>

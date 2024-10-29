@@ -2,8 +2,12 @@
 import StarIcon from '../icons/StarIcon.vue'
 import FormInputText from './FormInputText.vue'
 import FormInputSelect from './FormInputSelect.vue'
-import { computed, onMounted, provide, shallowRef, ref, watchEffect } from 'vue';
+import {  onMounted, provide, shallowRef } from 'vue';
 import FormInputTextarea from './FormInputTextarea.vue';
+
+defineOptions({
+    inheritAttrs: false,
+})
 
 const props = defineProps({
     required: {
@@ -64,7 +68,7 @@ onMounted(() => {
     <label for="fullname" class="form_input required">
 
         <span>{{ label }}</span>
-        <component v-model="model" :is="inputComponent"></component>
+        <component  v-model="model" :is="inputComponent"></component>
 
         <StarIcon v-if="required" />
     </label>

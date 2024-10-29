@@ -2,12 +2,11 @@
 import { inject } from 'vue';
 
 const settings = inject('settings')
-console.log(settings);
 
 </script>
 
 <template>
-    <select class="" :name="settings.name">
+    <select :required="settings.required" class="" :name="settings.name">
         <option value="" selected="selected"></option>
         <option :value="i" v-for="(option,i) in settings.options">{{ option }}</option>
     </select>

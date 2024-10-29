@@ -5,10 +5,10 @@ import Link from '../components/buttons/Link.vue';
 <template>
     <div class="main_container offerta">
         <h1 class="block-title">
-            Public offer HelpDeskEddy
+            Public offer DaoDesk
         </h1>
         <div class="offerta_container">
-            <p>On this page you can read the public offer of HelpDeskEddy.</p>
+            <p>On this page you can read the public offer of DaoDesk.</p>
 
             <ol>
                 <li>

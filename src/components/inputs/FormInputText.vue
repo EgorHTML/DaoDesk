@@ -20,7 +20,7 @@ watchEffect(() => {
 
 <template>
     <div style="position: relative;">
-        <input :type="settings?.type" :name="settings?.name" v-model="model">
+        <input v-bind="settings" v-model="model">
         <input type="text" v-model="template" v-if="afterTemplate"
             style="position: absolute; left: 0;z-index: -1; color: #adadad;" disabled>
 

@@ -8,9 +8,9 @@ import Link from '../../components/buttons/Link.vue';
             <span>Support and technical issues</span>
             <ul>
                 <li>
-                    <a href="mailto:support@helpdeskeddy.com" target="_blank"> <span class="icon-span"><i
+                    <a href="mailto:support@daodesk.ai" target="_blank"> <span class="icon-span"><i
                                 class="hdes-mail"></i></span>
-                        support@helpdeskeddy.com</a>
+                        support@daodesk.ai</a>
                 </li>
                 <li>
                     <a href="https://t.me/daodesk_bot" target="_blank">
@@ -76,7 +76,7 @@ import Link from '../../components/buttons/Link.vue';
 .contact-list {
     width: 100%;
     text-align: left;
-    padding: 30px;
+    padding: 30px 40px 0px 20px;
     background: #f5fafb;
     height: 100%;
 }

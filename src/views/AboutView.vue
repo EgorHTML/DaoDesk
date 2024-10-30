@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
     <div class="main_container">
         <h5 class="block-title">About DaoDesk</h5>

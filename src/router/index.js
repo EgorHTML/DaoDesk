@@ -28,8 +28,9 @@ const router = createRouter({
                 top: 80,
                 behavior: 'smooth',
             }
-        }else{
-            return {top:0}
+        }
+        else {
+            return { top: 0 }
         }
     },
     history: createWebHistory(),

@@ -17,9 +17,9 @@ const priceDescription = computed(() => {
 </script>
 
 <template>
-    <div class="pricing_platform" id="price">
+    <div class="pricing_platform" >
         <div class="pricing_platform__title">
-            <h4>Cost of the platform</h4>
+            <h4 id="price">Cost of the platform</h4>
         </div>
         <div class="card_price">
             <h5>Online version</h5>

@@ -26,13 +26,8 @@ html {
     overflow-x:hidden;
 }
 
-a{
-    color: #000;
-}
-
 #app,html,body{
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .main_container{
@@ -54,11 +49,6 @@ a, img {
 .contact-list .offerta, .contact-list ul li a:hover, .private-policy-url, .try-free-page h2 a {
     color: #2c9b75;
     text-decoration: underline;
-}
-
-.blog-categories a.active, .blog-categories a:hover, .our-partners .our-partners-short a, .main_container a {
-    color: #2c9b75;
-    text-decoration: none;
 }
 
 .content_center{

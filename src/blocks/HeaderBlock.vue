@@ -39,7 +39,11 @@ import PrimaryButton from '../components/buttons/PrimaryButton.vue';
     </div>
 </template>
 
-<style>
+<style scoped>
+a{
+    color: #000;
+}
+
 .main_header__navigation,
 .main_header__buttons,
 .main_header,.main_header__container {

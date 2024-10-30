@@ -1,13 +1,10 @@
 <script setup>
 import StarIcon from '../icons/StarIcon.vue'
-import FormInputText from './FormInputText.vue'
-import FormInputSelect from './FormInputSelect.vue'
-import {  onMounted, provide, shallowRef } from 'vue';
-import FormInputTextarea from './FormInputTextarea.vue';
+import {  onMounted, provide, shallowRef } from 'vue'
 
-defineOptions({
-    inheritAttrs: false,
-})
+const FormInputText = () => import('./FormInputText.vue')
+const FormInputSelect = () => import('./FormInputSelect.vue')
+const FormInputTextarea = () => import('./FormInputTextarea.vue')
 
 const props = defineProps({
     required: {
@@ -45,23 +42,21 @@ const props = defineProps({
 })
 
 const model = defineModel()
+const inputComponent = shallowRef()
 
 provide('model',model)
-
-const inputComponent = shallowRef()
 provide('settings', props)
-onMounted(() => {
+
+onMounted(async() => {
     const inputComponents = {
         'password': FormInputText,
         'text': FormInputText,
         'select': FormInputSelect,
         'textarea':FormInputTextarea
     }
-
-    inputComponent.value = inputComponents[props.type]
+    
+    inputComponent.value =(await inputComponents[props.type ?? 'text']()).default
 })
-
-
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-import FormInput from '../../components/inputs/FormInput.vue';
+import FormInput from '../../components/inputs/FormInputFactory.vue';
 import PrimaryButton from '../../components/buttons/PrimaryButton.vue';
 
 const selectTopic = ['Product Features', 'Partnership', 'License cost - private servers', 'Integration', 'Offers']

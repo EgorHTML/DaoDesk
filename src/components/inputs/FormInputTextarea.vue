@@ -1,27 +1,13 @@
 <script setup>
-import { inject, ref, watchEffect } from 'vue';
+import { inject } from 'vue';
 
 const settings = inject('settings')
 const model = defineModel()
-
-const afterTemplate = settings.afterTemplate
-
-const template = ref()
-
-watchEffect(() => {
-    if (model.value) {
-        template.value = `${model.value}${afterTemplate}`
-    } else {
-        template.value = ''
-    }
-})
 </script>
 
 <template>
     <div style="position: relative;">
         <textarea  v-bind="settings"  v-model="model"></textarea>
-
-
     </div>
     </input>
 

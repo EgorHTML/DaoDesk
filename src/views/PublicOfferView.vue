@@ -10,7 +10,7 @@ import Link from '../components/buttons/Link.vue';
         <div class="offerta_container">
             <p>On this page you can read the public offer of DaoDesk.</p>
 
-            <ol>
+            <ol class="offerta_links">
                 <li>
                     <Link to="#User agreement">User agreement &nbsp;</Link>
                 </li>
@@ -281,28 +281,38 @@ import Link from '../components/buttons/Link.vue';
     </div>
 </template>
 
-<style scoped>
+<style>
 .main_container.offerta {
     background: #fefefe;
+}
+
+.offerta .offerta_links a{
+    color: #2c9b75;
+    text-decoration: none;
+}
+
+.offerta a{
+    color: #2c9b75;
+    text-decoration: underline;
 }
 
 .offerta_container {
     margin-bottom: 30px;
 }
 
-ol li {
+.offerta ol li {
     counter-increment: step-counter;
     position: relative;
     line-height: 20px;
     padding: 7px 0 7px 40px;
 }
 
-ol li:hover {
+.offerta ol li:hover {
     text-decoration: underline;
     color: #2c9b75;
 }
 
-ol li:before, ul li:before {
+.offerta ol li:before,.offerta ul li:before {
     content: '\00a0' counter(step-counter) '.';
     font-family: GothamProMediumItalic;
     font-size: 10px;

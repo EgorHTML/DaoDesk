@@ -41,6 +41,10 @@ import Link from '../../components/buttons/Link.vue';
 </template>
 
 <style scoped>
+a{
+    color: black
+}
+
 .hdes-telegram:before {
     content: "\e916";
 }

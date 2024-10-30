@@ -22,7 +22,11 @@ function submit() {
         block.forEach(field => {
             if (!field.value && field.value.value != 0 && field.required) {
                 field.class = 'not-valid'
-                err.push(field)
+                err.push({
+                    code: 'not-filled',
+                    title: 'not-filled',
+                    details: `Поле <strong>"${field.label}</strong> является обязательным для заполнения`
+                })
 
             } else {
                 field.class = ''

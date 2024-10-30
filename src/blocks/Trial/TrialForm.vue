@@ -1,9 +1,9 @@
 <script setup>
 import Form from '../forms/Form.vue';
-import { ref, watchEffect } from 'vue';
+import ErrorList from '../../components/alerts/ErrorList.vue';
+import { computed, ref, watchEffect } from 'vue';
 
 const agents = ['1-5', '5-10', '10-15', '15-25', '25-50', '50-100', '100-250', '250+']
-const formErrors = ref([])
 
 const fields = ref(
     [
@@ -75,6 +75,13 @@ const fields = ref(
         ]
     ])
 
+const formErrors = ref([])
+const requestErrors = ref([])
+
+const errors = computed(() => {
+    return [...formErrors.value, ...requestErrors.value]
+})
+
 watchEffect(() => {
     const companyName = fields.value[0][2].value
     const domainAddress = fields.value[2][0]
@@ -82,25 +89,17 @@ watchEffect(() => {
     domainAddress.value = companyName
 })
 
-watchEffect(()=>{
-    console.log(formErrors.value, 'formErrors');
-})
-
 function submit() {
-    console.log(fields.value, 'trial');
-    
+
 }
 </script>
 
 <template>
-    <Form :fields="fields" @submit="submit" v-model:errors="formErrors"/>
+    <ErrorList :errors="errors" />
+    <Form :fields="fields" @submit="submit" v-model:errors="formErrors" />
 </template>
 
 <style>
-.not-valid {
-    background-color: brown !important;
-}
-
 .form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,6 +1,5 @@
 <script setup>
-import TrialForm from '../blocks/Trial/TrialForm.vue';
-import ErrorList from '../components/alerts/ErrorList.vue';
+import TrialForm from '../blocks/Trial/TrialForm.vue'
 </script>
 
 <template>
@@ -8,8 +7,7 @@ import ErrorList from '../components/alerts/ErrorList.vue';
         <h4>Try it for free!</h4>
         <h6>14-day trial period. <RouterLink to="/#price"><span>Get pricing</span></RouterLink>
         </h6>
-        <ErrorList/>
-          <TrialForm/>
+        <TrialForm />
     </div>
 </template>
 
@@ -28,6 +26,4 @@ import ErrorList from '../components/alerts/ErrorList.vue';
 .trail_form h4 {
     font-weight: 400;
 }
-
-
 </style>

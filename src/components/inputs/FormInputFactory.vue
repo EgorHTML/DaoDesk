@@ -1,6 +1,6 @@
 <script setup>
 import StarIcon from '../icons/StarIcon.vue'
-import {  onMounted, provide, shallowRef } from 'vue'
+import { onMounted, provide, shallowRef } from 'vue'
 
 const FormInputText = () => import('./FormInputText.vue')
 const FormInputSelect = () => import('./FormInputSelect.vue')
@@ -32,30 +32,30 @@ const props = defineProps({
         type: String,
         required: false
     },
-    options:{
-        default(){
+    options: {
+        default() {
             return []
         },
-        required:false,
-        type:Array
+        required: false,
+        type: Array
     }
 })
 
 const model = defineModel()
 const inputComponent = shallowRef()
 
-provide('model',model)
+provide('model', model)
 provide('settings', props)
 
-onMounted(async() => {
+onMounted(async () => {
     const inputComponents = {
         'password': FormInputText,
         'text': FormInputText,
         'select': FormInputSelect,
-        'textarea':FormInputTextarea
+        'textarea': FormInputTextarea
     }
-    
-    inputComponent.value =(await inputComponents[props.type ?? 'text']()).default
+
+    inputComponent.value = (await inputComponents[props.type ?? 'text']()).default
 })
 </script>
 
@@ -63,13 +63,23 @@ onMounted(async() => {
     <label for="fullname" class="form_input required">
 
         <span>{{ label }}</span>
-        <component  v-model="model" :is="inputComponent"></component>
+        <component v-model="model" :is="inputComponent"></component>
 
         <StarIcon v-if="required" />
     </label>
 </template>
 
 <style>
+.form_input.not-valid input,
+.form_input.not-valid select,
+.form_input.not-valid textarea {
+    border-color: #c53636;
+}
+
+.form_input.not-valid .star_icon.line {
+    background-color: red;
+}
+
 .form_input {
     width: 100%;
     float: left;
